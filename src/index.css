@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* 🎨 Warm Spiritual Theme Colors */
+  --deep-indigo: #3E3A66;
+  --warm-gold: #D4AF37;
+  --soft-beige: #F9F4ED;
+  --burnt-maroon: #752B19;
+  --text-dark: #2C2C2C;
+  --accent-light: #FDE9B4;
+
+  /* 🖋️ Fonts */
+  --font-main: 'Merriweather', Georgia, serif;
+  --font-alt: 'Segoe UI', Roboto, sans-serif;
 }
 
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--soft-beige);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Optional: Standard heading styling */
+h1, h2, h3, h4, h5 {
+  color: var(--deep-indigo);
+  font-family: var(--font-main);
+  margin-top: 1rem;
+}
+
+/* Code blocks, if needed */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--burnt-maroon);
 }
