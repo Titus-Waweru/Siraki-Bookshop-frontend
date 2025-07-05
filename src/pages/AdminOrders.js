@@ -1,7 +1,12 @@
-// src/pages/AdminOrders.js
 import React, { useEffect, useState } from 'react';
 import { Container, Table, Spinner, Alert, Form, Row, Col, Button } from 'react-bootstrap';
 import axios from 'axios';
+
+// ✅ Dynamic backend base URL
+const API_BASE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:5000'
+    : 'https://siraki-bookshop-backend.onrender.com';
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -9,12 +14,12 @@ const AdminOrders = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [search, setSearch] = useState('');
-  const [sortBy, setSortBy] = useState('date'); // or 'total'
+  const [sortBy, setSortBy] = useState('date');
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/orders');
+        const res = await axios.get(`${API_BASE_URL}/api/orders`);
         setOrders(res.data);
         setFilteredOrders(res.data);
         setLoading(false);
