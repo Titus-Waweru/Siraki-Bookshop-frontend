@@ -24,10 +24,12 @@ const Products = ({ addToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const navigate = useNavigate();
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products');
+        const res = await axios.get(`${API_BASE_URL}/products`);
         setProducts(res.data);
         setDisplayedProducts(res.data);
         const uniqueCategories = ['All', ...new Set(res.data.map(p => p.category))];
@@ -40,9 +42,8 @@ const Products = ({ addToCart }) => {
     };
 
     fetchProducts();
-  }, []);
+  }, [API_BASE_URL]);
 
-  // Search & filter logic
   useEffect(() => {
     let filtered = [...products];
 
@@ -71,7 +72,6 @@ const Products = ({ addToCart }) => {
         🛍️ Explore Our Product Categories
       </h2>
 
-      {/* Search & Filter Row */}
       <Row className="mb-4">
         <Col md={6} sm={12}>
           <Form.Control
@@ -95,7 +95,6 @@ const Products = ({ addToCart }) => {
         </Col>
       </Row>
 
-      {/* Loading & Error */}
       {loading && (
         <div className="text-center">
           <Spinner animation="border" />
@@ -103,7 +102,6 @@ const Products = ({ addToCart }) => {
       )}
       {error && <Alert variant="danger">{error}</Alert>}
 
-      {/* Product List */}
       <Row>
         {displayedProducts.length === 0 ? (
           <Col className="text-center py-4">
