@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/Logosi.png';
 
 const Header = () => (
-  <Navbar expand="lg" style={{ backgroundColor: '#6C4F3D' }}>
+  <Navbar fixed="top" expand="lg" style={{ backgroundColor: '#6C4F3D' }}>
     <Container>
       <Navbar.Brand as={Link} to="/" className="d-flex align-items-center text-white">
         <img
