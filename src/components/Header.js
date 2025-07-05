@@ -1,10 +1,11 @@
+// src/components/Header.js
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/Logosi.png';
 
 const Header = () => (
-  <Navbar fixed="top" expand="lg" style={{ backgroundColor: '#6C4F3D' }}>
+  <Navbar expand="lg" fixed="top" style={{ backgroundColor: '#6C4F3D', zIndex: 1000 }}>
     <Container>
       <Navbar.Brand as={Link} to="/" className="d-flex align-items-center text-white">
         <img
