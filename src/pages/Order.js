@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col, Table, Alert } from 'react-bootstrap';
 import axios from 'axios';
 
+// ✅ Dynamic base URL
+const BASE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:5000'
+    : 'https://siraki-bookshop-backend.onrender.com';
+
 const Order = ({ cart, removeFromCart, updateQty }) => {
   const [form, setForm] = useState({
     customer_name: '',
@@ -38,7 +44,7 @@ const Order = ({ cart, removeFromCart, updateQty }) => {
     };
 
     try {
-      await axios.post('http://localhost:5000/api/orders', order);
+      await axios.post(`${BASE_URL}/api/orders`, order);
       setSuccess('✅ Order placed successfully!');
       setError('');
     } catch (err) {

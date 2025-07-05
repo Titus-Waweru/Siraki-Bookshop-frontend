@@ -1,39 +1,10 @@
-:root {
-  /* 🎨 Warm Spiritual Theme Colors */
-  --deep-indigo: #3E3A66;
-  --warm-gold: #D4AF37;
-  --soft-beige: #F9F4ED;
-  --burnt-maroon: #752B19;
-  --text-dark: #2C2C2C;
-  --accent-light: #FDE9B4;
-
-  /* 🖋️ Fonts */
-  --font-main: 'Merriweather', Georgia, serif;
-  --font-alt: 'Segoe UI', Roboto, sans-serif;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  background-color: var(--soft-beige);
-  color: var(--text-dark);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
-}
-
-/* Optional: Standard heading styling */
-h1, h2, h3, h4, h5 {
-  color: var(--deep-indigo);
-  font-family: var(--font-main);
-  margin-top: 1rem;
-}
-
-/* Code blocks, if needed */
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  background-color: #f4f4f4;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: var(--burnt-maroon);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--soft-beige); /* or any header background */
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
