@@ -34,7 +34,9 @@ const App = () => {
   return (
     <Router>
       <Header cart={cart} />
-      <main className="App">
+      
+      {/* Apply top padding so content is not hidden behind fixed header */}
+      <main style={{ paddingTop: '90px', paddingLeft: '1rem', paddingRight: '1rem', minHeight: '80vh' }}>
         <AppRoutes
           addToCart={addToCart}
           cart={cart}
@@ -42,6 +44,7 @@ const App = () => {
           updateQty={updateQty}
         />
       </main>
+
       <Footer />
     </Router>
   );
