@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -13,6 +12,12 @@ const Header = () => (
           alt="Siraki Bookshop Logo"
           height="40"
           className="me-2"
+          style={{
+            backgroundColor: '#ffffff',
+            padding: '4px',
+            borderRadius: '6px',
+            boxShadow: '0 0 4px rgba(0,0,0,0.2)',
+          }}
         />
         <span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Siraki Bookshop</span>
       </Navbar.Brand>
