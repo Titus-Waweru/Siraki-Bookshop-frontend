@@ -15,16 +15,23 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    const timestamp = new Date().toLocaleString();
+
+    const dataToSend = {
+      ...form,
+      time: timestamp, // include time field for the EmailJS template
+    };
+
     emailjs
-      .send('service_zdjmj9a', 'template_default', form, 'uLCxWjGGODQ3HHuTc')
+      .send('service_zdjmj9a', 'template_default', dataToSend, 'uLCxWjGGODQ3HHuTc')
       .then((result) => {
-        console.log('Email successfully sent!', result.text);
+        console.log('✅ Email successfully sent!', result.text);
         setSubmitted(true);
         setForm({ name: '', email: '', message: '' });
       })
       .catch((error) => {
-        console.error('EmailJS error:', error);
-        alert('❌ Failed to send message. Please try again later.');
+        console.error('❌ EmailJS error:', error);
+        alert('Failed to send message. Please try again later.');
       })
       .finally(() => {
         setLoading(false);
@@ -95,7 +102,7 @@ const Contact = () => {
           <div className="mt-4 text-center text-muted" style={{ fontSize: '0.9rem' }}>
             You can also email us directly at <strong>tituswaweru631@gmail.com</strong>
             <br />
-            or call us on <strong>+254 745745186</strong>
+            or call us on <strong>+254 745 745 186</strong>
           </div>
         </Col>
       </Row>

@@ -41,7 +41,7 @@ const Home = () => {
           <Col md={4} className="mb-4">
             <Card className="h-100 shadow-sm">
               <Card.Body>
-                <h4 style={{ color: 'var(--burnt-maroon)' }}>✍️ Kabook Store</h4>
+                <h4 style={{ color: 'var(--burnt-maroon)' }}>✍️Siraki Book Store</h4>
                 <p>Affordable school supplies: pens, books, files, timetables & everything for young learners.</p>
               </Card.Body>
             </Card>
