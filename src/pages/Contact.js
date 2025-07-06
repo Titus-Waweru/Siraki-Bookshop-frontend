@@ -19,11 +19,11 @@ const Contact = () => {
 
     const dataToSend = {
       ...form,
-      time: timestamp, // include time field for the EmailJS template
+      time: timestamp, // Required by your template
     };
 
     emailjs
-      .send('service_zdjmj9a', 'template_default', dataToSend, 'uLCxWjGGODQ3HHuTc')
+      .send('service_zdjmj9a', 'template_cqakmvh', dataToSend, 'uLCxWjGGODQ3HHuTc')
       .then((result) => {
         console.log('✅ Email successfully sent!', result.text);
         setSubmitted(true);
