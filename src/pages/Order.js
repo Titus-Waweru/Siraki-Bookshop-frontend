@@ -116,6 +116,24 @@ const Order = ({ cart, removeFromCart, updateQty }) => {
                 <option>Card</option>
               </Form.Select>
             </Form.Group>
+
+            {/* MPESA Instructions */}
+            {form.payment_method === 'MPESA' && (
+              <Alert variant="info" className="mt-3">
+                <strong>MPESA Payment Instructions:</strong>
+                <ol className="mt-2 mb-0">
+                  <li>Go to your MPESA menu.</li>
+                  <li>Select <strong>Lipa na MPESA</strong>.</li>
+                  <li>Choose <strong>Paybill</strong>.</li>
+                  <li>Enter Business Number: <strong>522522</strong>.</li>
+                  <li>Enter Account Number: <strong>1299181341</strong>.</li>
+                  <li>Enter the total amount: <strong>KSh {totalAmount.toLocaleString()}</strong>.</li>
+                  <li>Enter your MPESA PIN and confirm.</li>
+                  <li>Submit this form after making the payment.</li>
+                </ol>
+              </Alert>
+            )}
+
             <Form.Group className="mb-3">
               <Form.Label>Delivery Method</Form.Label>
               <Form.Select
@@ -127,6 +145,7 @@ const Order = ({ cart, removeFromCart, updateQty }) => {
                 <option>Delivery</option>
               </Form.Select>
             </Form.Group>
+
             <Button type="submit" variant="success" className="w-100">
               Place Order
             </Button>
