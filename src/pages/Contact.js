@@ -93,9 +93,9 @@ const Contact = () => {
           </Form>
 
           <div className="mt-4 text-center text-muted" style={{ fontSize: '0.9rem' }}>
-            You can also email us directly at <strong>support@sirakibookshop.co.ke</strong>
+            You can also email us directly at <strong>tituswaweru631@gmail.com</strong>
             <br />
-            or call us on <strong>+254 712 345 678</strong>
+            or call us on <strong>+254 745745186</strong>
           </div>
         </Col>
       </Row>
