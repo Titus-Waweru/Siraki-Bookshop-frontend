@@ -19,7 +19,7 @@ const Contact = () => {
 
     const dataToSend = {
       ...form,
-      time: timestamp, // Required by your template
+      time: timestamp,
     };
 
     emailjs
@@ -39,55 +39,57 @@ const Contact = () => {
   };
 
   return (
-    <Container className="py-5">
+    <Container className="py-5 font-manrope">
       <Row className="justify-content-center">
         <Col md={8}>
-          <h2 className="text-center mb-4">📬 Get in Touch With Us</h2>
-          <p className="text-center text-muted mb-4">
-            Whether you have a question about a product, an order, or a partnership — we’re here to help.
-            Fill out the form below and we’ll get back to you within 24 hours.
+          <h2 className="text-center mb-3 fw-bold" style={{ color: 'var(--deep-indigo)' }}>
+            📬 Let’s Talk — We're Listening
+          </h2>
+          <p className="text-center text-muted mb-4" style={{ fontSize: '1.05rem' }}>
+            Have a question, comment, or need support? Whether you're reaching out about a product, an order,
+            or simply want to connect — we’d love to hear from you. Use the form below, and we’ll reply within 24 hours.
           </p>
 
           {submitted && (
             <Alert variant="success">
-              ✅ Thank you! Your message has been received. We'll get back to you soon.
+              ✅ Thank you for reaching out! We've received your message and will get back to you shortly.
             </Alert>
           )}
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formName" className="mb-3">
-              <Form.Label>Full Name</Form.Label>
+              <Form.Label className="fw-semibold">Full Name</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Enter your full name"
+                placeholder="e.g. Jane Muthoni"
                 required
               />
             </Form.Group>
 
             <Form.Group controlId="formEmail" className="mb-3">
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label className="fw-semibold">Email Address</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Enter your email"
+                placeholder="you@example.com"
                 required
               />
             </Form.Group>
 
             <Form.Group controlId="formMessage" className="mb-4">
-              <Form.Label>Message</Form.Label>
+              <Form.Label className="fw-semibold">Message</Form.Label>
               <Form.Control
                 as="textarea"
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 rows={4}
-                placeholder="Type your message here..."
+                placeholder="Let us know how we can help..."
                 required
               />
             </Form.Group>
@@ -99,10 +101,12 @@ const Contact = () => {
             </div>
           </Form>
 
-          <div className="mt-4 text-center text-muted" style={{ fontSize: '0.9rem' }}>
-            You can also email us directly at <strong>tituswaweru631@gmail.com</strong>
-            <br />
-            or call us on <strong>+254 745 745 186</strong>
+          <div className="mt-5 text-center text-muted" style={{ fontSize: '0.95rem' }}>
+            <p className="mb-1">Prefer direct communication?</p>
+            <p>
+              ✉️ <strong>tituswaweru631@gmail.com</strong><br />
+              📞 <strong>+254 745 745 186</strong>
+            </p>
           </div>
         </Col>
       </Row>

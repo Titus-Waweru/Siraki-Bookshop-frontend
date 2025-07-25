@@ -3,12 +3,14 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const About = () => {
   return (
-    <Container className="py-5">
-      <Row className="mb-4">
+    <Container className="py-5 font-manrope">
+      <Row className="mb-4 text-center">
         <Col md={12}>
-          <h2 className="text-center mb-3" style={{ fontWeight: 'bold' }}>About Siraki Wisdom & Bookshop</h2>
-          <p className="text-center text-muted">
-            Rooted in faith. Driven by culture. Empowering minds for generations.
+          <h2 className="mb-3 fw-bold" style={{ color: 'var(--deep-indigo)', fontSize: '2.25rem' }}>
+            About Siraki Wisdom & Bookshop
+          </h2>
+          <p className="text-muted" style={{ fontSize: '1.1rem' }}>
+            Rooted in <strong>faith</strong>. Guided by <strong>culture</strong>. Empowering minds across generations.
           </p>
         </Col>
       </Row>
@@ -23,10 +25,11 @@ const About = () => {
           />
         </Col>
         <Col md={6}>
-          <h4>📖 Our Story</h4>
-          <p>
-            Siraki Wisdom & Bookshop was born out of a vision to preserve cultural identity, promote Christian values,
-            and foster academic excellence within Kenyan communities. Our founders, inspired by Proverbs 4:7 — "Wisdom is the principal thing," established the bookshop to be more than a store — but a movement.
+          <h4 className="mb-3">📖 Our Story</h4>
+          <p style={{ lineHeight: '1.7' }}>
+            Siraki Wisdom & Bookshop began as a vision — a dream to protect our cultural identity, nurture Christian values,
+            and champion academic growth. Inspired by Proverbs 4:7 — <em>"Wisdom is the principal thing"</em> —
+            our founders built not just a bookshop, but a mission-driven movement to serve hearts, homes, and classrooms.
           </p>
         </Col>
       </Row>
@@ -41,42 +44,44 @@ const About = () => {
           />
         </Col>
         <Col md={6} className="order-md-1">
-          <h4>🛍️ What We Offer</h4>
-          <ul>
-            <li>Authentic Kikuyu and Swahili Bibles</li>
-            <li>Christian books, devotionals, and resources</li>
-            <li>School supplies and revision materials</li>
-            <li>Wisdom literature and inspirational reads</li>
-            <li>Cultural storytelling and digital downloads</li>
+          <h4 className="mb-3">🛍️ What We Offer</h4>
+          <ul style={{ lineHeight: '1.8', fontSize: '1.05rem' }}>
+            <li>📖 Authentic Kikuyu and Swahili Bibles</li>
+            <li>📚 Christian books, devotionals, and spiritual resources</li>
+            <li>📝 School supplies, revision kits & learning tools</li>
+            <li>📘 Wisdom literature and inspirational content</li>
+            <li>📲 Cultural storytelling & digital downloads</li>
           </ul>
         </Col>
       </Row>
 
       <Row className="mb-5">
         <Col md={12}>
-          <h4>🎯 Our Mission</h4>
-          <p>
-            To make wholesome, faith-based, and culturally relevant content accessible to every household — both in print and digitally. We believe every book has the power to shape a soul, and every Bible can change a generation.
+          <h4 className="mb-3">🎯 Our Mission</h4>
+          <p style={{ lineHeight: '1.7' }}>
+            Our mission is simple yet powerful: to make <strong>faith-based</strong> and <strong>culturally rooted</strong> content
+            accessible to every home. Whether in print or digital, every book we offer carries the power to shape a heart and
+            transform a generation.
           </p>
         </Col>
       </Row>
 
-      <Row className="mb-4">
+      <Row className="mb-5">
         <Col md={12}>
-          <h4>💡 Why Choose Us?</h4>
-          <ul>
-            <li><strong>Faith-Centered:</strong> Every product is chosen with spiritual growth in mind.</li>
-            <li><strong>Community-Driven:</strong> We listen, grow, and evolve with the needs of our people.</li>
-            <li><strong>Affordable:</strong> We believe knowledge should never be overpriced.</li>
-            <li><strong>Locally Rooted:</strong> We embrace and promote our Kikuyu heritage while being accessible nationwide.</li>
+          <h4 className="mb-3">💡 Why Choose Us?</h4>
+          <ul style={{ lineHeight: '1.8', fontSize: '1.05rem' }}>
+            <li><strong>🙏 Faith-Centered:</strong> We curate every product with spiritual growth at heart.</li>
+            <li><strong>👨‍👩‍👧‍👦 Community-Driven:</strong> We serve based on real needs, feedback, and love.</li>
+            <li><strong>💸 Affordable:</strong> Knowledge and faith should never be out of reach.</li>
+            <li><strong>🌍 Locally Rooted:</strong> We celebrate Kikuyu heritage while serving all corners of Kenya.</li>
           </ul>
         </Col>
       </Row>
 
       <Row className="text-center">
         <Col>
-          <h5 style={{ color: '#6c757d' }}>
-            📍 Located in the heart of Kenya. Shipping countrywide. Changing lives daily.
+          <h5 style={{ color: '#6c757d', fontWeight: '500' }}>
+            📍 Based in Kenya. Shipping countrywide. Transforming lives — one book at a time.
           </h5>
         </Col>
       </Row>

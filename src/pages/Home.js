@@ -8,14 +8,20 @@ const Home = () => {
       <Container className="py-5 text-center">
         <Row>
           <Col>
-            <h1 className="mb-3" style={{ color: 'var(--deep-indigo)' }}>
+            <h1 className="mb-3 fw-bold" style={{ color: 'var(--deep-indigo)', fontSize: '2.75rem' }}>
               Welcome to Siraki Wisdom & Bookshop
             </h1>
-            <p className="lead" style={{ fontSize: '1.25rem' }}>
-              Where faith, language, and education come together to shape future generations.
+            <p className="lead mx-auto" style={{ fontSize: '1.3rem', maxWidth: '720px' }}>
+              Discover a sacred space where <strong>faith meets education</strong>, and the power of <strong>language nurtures culture</strong>. We’re here to inspire every generation—young and old.
             </p>
-            <Button as={Link} to="/products" variant="warning" size="lg" className="mt-3">
-              📚 Shop Now
+            <Button
+              as={Link}
+              to="/products"
+              variant="warning"
+              size="lg"
+              className="mt-4 px-4 py-2 fw-semibold"
+            >
+              📚 Browse Our Store
             </Button>
           </Col>
         </Row>
@@ -23,26 +29,32 @@ const Home = () => {
         {/* Highlights Section */}
         <Row className="mt-5">
           <Col md={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <h4 style={{ color: 'var(--burnt-maroon)' }}>🕊️ Faith Literature</h4>
-                <p>Get hard-to-find Kikuyu Bibles, devotionals, and family-focused Christian teachings.</p>
+                <h4 className="mb-2" style={{ color: 'var(--burnt-maroon)' }}>🕊️ Faith & Devotion</h4>
+                <p className="text-muted">
+                  Dive into rare Kikuyu Bibles, powerful devotionals, and heartfelt family-oriented Christian resources to enrich your spiritual journey.
+                </p>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <h4 style={{ color: 'var(--burnt-maroon)' }}>🎒 Children’s Book Corner</h4>
-                <p>Inspire young minds with Sunday School books, charts, coloring books, and storytime favorites.</p>
+                <h4 className="mb-2" style={{ color: 'var(--burnt-maroon)' }}>🎒 Children’s Learning Corner</h4>
+                <p className="text-muted">
+                  Unlock creativity and faith in young hearts with colorful Sunday School books, charts, and wholesome storybooks they'll love.
+                </p>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <h4 style={{ color: 'var(--burnt-maroon)' }}>✍️Siraki Book Store</h4>
-                <p>Affordable school supplies: pens, books, files, timetables & everything for young learners.</p>
+                <h4 className="mb-2" style={{ color: 'var(--burnt-maroon)' }}>✍️ Siraki Supplies</h4>
+                <p className="text-muted">
+                  From exercise books to pens, timetables to files — we offer budget-friendly essentials for every learner’s success.
+                </p>
               </Card.Body>
             </Card>
           </Col>
@@ -50,13 +62,22 @@ const Home = () => {
       </Container>
 
       {/* Footer Call to Action */}
-      <div style={{ backgroundColor: 'var(--accent-light)', padding: '2rem 0' }}>
-        <Container>
-          <h5 style={{ color: 'var(--deep-indigo)' }}>
-            Ready to grow your faith and support local language culture?
+      <div style={{ backgroundColor: 'var(--accent-light)', padding: '3rem 0' }}>
+        <Container className="text-center">
+          <h5 className="fw-bold mb-2" style={{ color: 'var(--deep-indigo)' }}>
+            Join us in preserving language, growing faith, and empowering education.
           </h5>
-          <Button as={Link} to="/contact" variant="outline-dark" size="md" className="mt-2">
-            Contact Us
+          <p className="text-muted mb-3">
+            We’re more than a bookstore — we’re a movement rooted in wisdom, heritage, and purpose.
+          </p>
+          <Button
+            as={Link}
+            to="/contact"
+            variant="outline-dark"
+            size="md"
+            className="px-4 fw-semibold"
+          >
+            ✉️ Contact Us Today
           </Button>
         </Container>
       </div>
